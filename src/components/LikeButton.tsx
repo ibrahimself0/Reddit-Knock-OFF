@@ -6,7 +6,7 @@ interface Props {
     postId: number;
 }
 
-interface Vote {
+export interface Vote {
     id: number;
     post_id: number;
     user_id: string;
@@ -45,7 +45,7 @@ const vote = async (voteValue: number, postId: number, userId: string) => {
     }
 };
 
-const fetchVotes = async (postId: number): Promise<Vote[]> => {
+export const fetchVotes = async (postId: number): Promise<Vote[]> => {
     const { data, error } = await supabase
         .from("votes")
         .select("*")

@@ -33,6 +33,7 @@ const PostList = ()=>{
                 <PostItem post={post} key={post.id} />
             ))}
         </div>
+
     )
 }
 export default PostList;
